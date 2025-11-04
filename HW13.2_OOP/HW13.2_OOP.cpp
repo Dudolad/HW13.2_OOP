@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Windows.h>
 
 namespace Namespace1 //перший простір імен з класамим 1, 2 та 4
 {
@@ -76,5 +77,21 @@ namespace Namespace2 //другий простір імен з класами 4, 3 та 2
 
 int main()
 {
+	SetConsoleOutputCP(1251);
+	SetConsoleCP(1251);
 
+
+	//створення об'єктів за схемою
+	Namespace1::Class_1 obg1;
+	Namespace2::Class_4 obg2;
+	Namespace2::Class_2 obg3;
+	Namespace1::Class_4 obg4;
+
+	//виклик методів для перевірки
+	obg1.show();
+	obg2.show();
+	obg3.show();
+	obg4.show();
+
+	return 0;
 }
